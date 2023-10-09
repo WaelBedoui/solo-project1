@@ -1,0 +1,140 @@
+function books(title, author,msrp,genre,numberOfPages,images,description){
+    return{
+        title:title,
+        author:author,
+        msrp:msrp,
+        genre:genre,
+        numberOfPages:numberOfPages,
+        images:images,
+        description:description
+    }
+}
+var book1=books('Solo Leveling','kimjon','150$','webtoon','200','images/sololeveling.png','fantasystory')
+var book2=books('Wind Breaker','yonjimhoo','150$','sports','460','images/windbreaker.png' ,'sportstory')
+var book3=books('Magic Emperor','samkimhojo','160$','shoneen','457','images/magicemperor.jpeg','senenstory') 
+var book4=books('Reader ViewPoint','samkimhojo','110$','webtoon','179','images/readerviewpoint.jpeg','senenstory') 
+var book5=books('The Beginning After The End','samkimhojo','175$','magic,webtoon','175','images/thebiginningaftertheend.jpeg','senenstory') 
+var book6=books('Solo Max Newbie','samkimhojo','100$','webtoon','123','images/solomaxnewbie.jpeg','senenstory') 
+var book7=books('Nano Machine','samkimhojo','145$','shoneen','180','images/nanomachine.jpeg','senenstory') 
+var book8=books('Ranker Who Lives a Second Life','samkimhojo','135$','shoneen','161','images/secondliferanker.jpeg','senenstory') 
+
+// $("body").append(`<img id="img1" src=${book1.images}>`)
+// $("body").append(`<img id="img2" src=${book2.images}>`)
+// $("body").append(`<img id="img3" src=${book3.images}>`)
+// $("body").append(`<img id="img4" src=${book4.images}>`)
+// $("body").append(`<img id="img5" src=${book5.images}>`)
+// $("body").append(`<img id="img6" src=${book6.images}>`)
+// $("body").append(`<img id="img7" src=${book7.images}>`)
+// $("body").append(`<img id="img8" src=${book8.images}>`)
+
+var array = [
+    {
+        name: "Solo Leveling",
+        author:"kimjon",
+        msrp:"150$",
+        genre:"webtoon",
+        numberofpages:"200",
+        image:'images/sololeveling.png',
+        description:"fantasystory"
+        
+    },
+    {
+        name: "Wind Breaker",
+        author:"yonjimhoo",
+        msrp:"150$",
+        genre:"sports",
+        numberofpages:"460",
+        image:'images/windbreaker.png',
+        description:"sportstory"
+    },
+    {
+        name: "Magic Emperor",
+        author:"samkimhojo",
+        msrp:"160$",
+        genre:"shoneen",
+        numberofpages:"457",
+        image:'images/magicemperor.jpeg',
+        description:"senenstory"
+    },
+    {
+        name: "Reader ViewPoint",
+        author:"samkimhojo",
+        msrp:"110$",
+        genre:"webtoon",
+        numberofpages:"179",
+        image:'images/readerviewpoint.jpeg',
+        description:"senenstory"
+    },
+    {
+        name: "The Beginning After The End",
+        author:"samkimhojo",
+        msrp:"175$",
+        genre:"magic,webtoon",
+        numberofpages:"175",
+        image:'images/thebiginningaftertheend.jpeg',
+        description:"senenstory"
+    },
+    {
+        name: "Solo Max Newbie",
+        author:"samkimhojo",
+        msrp:"100$",
+        genre:"webtoon",
+        numberofpages:"123",
+        image:'images/solomaxnewbie.jpeg',
+        description:"senenstory"
+    },
+    {
+        name: "Nano Machine",
+        author:"samkimhojo",
+        msrp:"145$",
+        genre:"webtoon",
+        numberofpages:"180",
+        image:'images/nanomachine.jpeg',
+        description:"senenstory"
+    },
+    {
+        name: "Ranker Who Lives a Second Life",
+        author:"samkimhojo",
+        msrp:"135$",
+        genre:"webtoon",
+        numberofpages:"161",
+        image:'images/secondliferanker.jpeg',
+        description:"senenstory"
+    }
+]
+ 
+function display(){
+    for(i=0;i<array.length;i++){
+        $("#items").append(` <img class="img" src=${array[i].image} >
+        <h1 style="color:#58BCEE" ><i>${array[i].name}</i></h1> <h1 style="color:#404040"><i>${array[i].author}</i></h1> <h1 style="color:#404040"><i>${array[i].msrp}</i></h1> <h1 style="color:#404040"><i>${array[i].numberofpages}</i></h1> 
+       
+        <h1 style="color:#404040"><i>${array[i].description}</i></h1>`)
+    }
+
+}
+display()
+
+function each(array, func) { 
+    for (var i = 0; i < array.length; i++) { 
+          func(array[i]); 
+    } 
+}
+
+// Get a reference to all image elements by their class
+var allImages = $('.img');
+
+// Define the URL you want to link to for each image
+var linkUrl = ["https://mangasololeveling.net/comic/solo-leveling-chapter-0-prologue/", "https://windbreakerwebtoon.com/wind-breaker-chapter-1/", "https://magicemperors.com/manga/magic-emperor-chapter-1/", "https://omniscientreaders.online/manga/omniscient-reader-chapter-0/" , "https://thebeginningaftertheend-manga.com/manga/the-beginning-after-the-end-episode-1-2/?2023-10-07" , "https://w2.solo-max.online/manga/solo-max-level-newbie-chapter-0/" , "https://nanomachine.online/manga/nano-machine-chapter-1-1/?date=2023-10-09", "https://w2.secondlife-ranker.com/second-life-ranker-chapter-1/" ];
+
+// Attach a click event handler to each image
+allImages.each(function(index) {
+  $(this).click(function() {
+    // Open the URL for the corresponding image in a new window
+    window.open(linkUrl[index], '_blank');
+  });
+});
+
+
+
+
+  
