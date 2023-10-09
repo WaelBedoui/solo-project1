@@ -18,14 +18,7 @@ var book6=books('Solo Max Newbie','samkimhojo','100$','webtoon','123','images/so
 var book7=books('Nano Machine','samkimhojo','145$','shoneen','180','images/nanomachine.jpeg','senenstory') 
 var book8=books('Ranker Who Lives a Second Life','samkimhojo','135$','shoneen','161','images/secondliferanker.jpeg','senenstory') 
 
-// $("body").append(`<img id="img1" src=${book1.images}>`)
-// $("body").append(`<img id="img2" src=${book2.images}>`)
-// $("body").append(`<img id="img3" src=${book3.images}>`)
-// $("body").append(`<img id="img4" src=${book4.images}>`)
-// $("body").append(`<img id="img5" src=${book5.images}>`)
-// $("body").append(`<img id="img6" src=${book6.images}>`)
-// $("body").append(`<img id="img7" src=${book7.images}>`)
-// $("body").append(`<img id="img8" src=${book8.images}>`)
+
 
 var array = [
     {
@@ -120,16 +113,16 @@ function each(array, func) {
     } 
 }
 
-// Get a reference to all image elements by their class
+
 var allImages = $('.img');
 
-// Define the URL you want to link to for each image
+
 var linkUrl = ["https://mangasololeveling.net/comic/solo-leveling-chapter-0-prologue/", "https://windbreakerwebtoon.com/wind-breaker-chapter-1/", "https://magicemperors.com/manga/magic-emperor-chapter-1/", "https://omniscientreaders.online/manga/omniscient-reader-chapter-0/" , "https://thebeginningaftertheend-manga.com/manga/the-beginning-after-the-end-episode-1-2/?2023-10-07" , "https://w2.solo-max.online/manga/solo-max-level-newbie-chapter-0/" , "https://nanomachine.online/manga/nano-machine-chapter-1-1/?date=2023-10-09", "https://w2.secondlife-ranker.com/second-life-ranker-chapter-1/" ];
 
-// Attach a click event handler to each image
+
 allImages.each(function(index) {
   $(this).click(function() {
-    // Open the URL for the corresponding image in a new window
+    
     window.open(linkUrl[index], '_blank');
   });
 });
