@@ -9,14 +9,7 @@ function books(title, author,msrp,genre,numberOfPages,images,description){
         description:description
     }
 }
-var book1=books('Solo Leveling','kimjon','150$','webtoon','200','images/sololeveling.png','fantasystory')
-var book2=books('Wind Breaker','yonjimhoo','150$','sports','460','images/windbreaker.png' ,'sportstory')
-var book3=books('Magic Emperor','samkimhojo','160$','shoneen','457','images/magicemperor.jpeg','senenstory') 
-var book4=books('Reader ViewPoint','samkimhojo','110$','webtoon','179','images/readerviewpoint.jpeg','senenstory') 
-var book5=books('The Beginning After The End','samkimhojo','175$','magic,webtoon','175','images/thebiginningaftertheend.jpeg','senenstory') 
-var book6=books('Solo Max Newbie','samkimhojo','100$','webtoon','123','images/solomaxnewbie.jpeg','senenstory') 
-var book7=books('Nano Machine','samkimhojo','145$','shoneen','180','images/nanomachine.jpeg','senenstory') 
-var book8=books('Ranker Who Lives a Second Life','samkimhojo','135$','shoneen','161','images/secondliferanker.jpeg','senenstory') 
+
 
 
 
@@ -122,7 +115,7 @@ var linkUrl = ["https://mangasololeveling.net/comic/solo-leveling-chapter-0-prol
 
 allImages.each(function(index) {
   $(this).click(function() {
-    
+   
     window.open(linkUrl[index], '_blank');
   });
 });
